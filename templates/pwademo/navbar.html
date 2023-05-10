@@ -14,16 +14,18 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul
+        class="navbar-nav me-auto mb-2 mb-lg-0"
+        hx-target="#main"
+        hx-swap="innerHTML"
+        hx-push-url="true"
+      >
         <li class="nav-item">
           <a
             href="#"
             class="nav-link"
             aria-current="page"
-            hx-target="#main"
             hx-get="{% url 'feed' %}"
-            hx-swap="innerHTML"
-            hx-push-url="true"
             _="install ToggleActiveNavigation(path: '{% url 'feed' %}')"
           >
             Feed
@@ -34,10 +36,7 @@
             href="#"
             class="nav-link"
             aria-current="page"
-            hx-target="#main"
             hx-get="{% url 'profile' %}"
-            hx-swap="innerHTML"
-            hx-push-url="true"
             _="install ToggleActiveNavigation(path: '{% url 'profile' %}')"
           >
             Profile

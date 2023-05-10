@@ -6,8 +6,14 @@ name = "pypi"
 [packages]
 django = "==4.2"
 whitenoise = "*"
+gunicorn = "*"
+uvicorn = "*"
+django-extensions = "*"
 
 [dev-packages]
 
 [requires]
 python_version = "3.11"
+
+[scripts]
+dev = "gunicorn pwademo.asgi:application -k uvicorn.workers.UvicornWorker"

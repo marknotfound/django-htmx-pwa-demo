@@ -17,3 +17,4 @@ python_version = "3.11"
 
 [scripts]
 dev = "gunicorn pwademo.asgi:application -k uvicorn.workers.UvicornWorker"
+build = "./manage.py build"

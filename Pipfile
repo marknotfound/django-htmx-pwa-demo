@@ -16,5 +16,5 @@ django-extensions = "*"
 python_version = "3.11"
 
 [scripts]
-dev = "gunicorn pwademo.asgi:application -k uvicorn.workers.UvicornWorker"
+dev = "python manage.py runserver"
 build = "python manage.py build"

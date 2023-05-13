@@ -1,6 +1,7 @@
 {
   "name": "Django/HTMX PWA Demo",
   "short_name": "DjangoHTMXPWA",
+  "description": "A demo of a PWA powered by Django and HTMX",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#fdfdfd",

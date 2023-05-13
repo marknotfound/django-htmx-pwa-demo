@@ -11,17 +11,25 @@ def index(request: HttpRequest):
 
 
 def feed(request: HttpRequest):
-    if request.headers.get("hx-request"):
-        return render(request, "pwademo/feed_partial.html")
+    response = (
+        render(request, "pwademo/feed_partial.html")
+        if request.headers.get("hx-request")
+        else render(request, "pwademo/feed.html")
+    )
 
-    return render(request, "pwademo/feed.html")
+    response["Vary"] = "HX-Request"
+    return response
 
 
 def profile(request: HttpRequest):
-    if request.headers.get("hx-request"):
-        return render(request, "pwademo/profile_partial.html")
+    response = (
+        render(request, "pwademo/profile_partial.html")
+        if request.headers.get("hx-request")
+        else render(request, "pwademo/profile.html")
+    )
 
-    return render(request, "pwademo/profile.html")
+    response["Vary"] = "HX-Request"
+    return response
 
 
 manifest = TemplateView.as_view(

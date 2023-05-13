@@ -16,4 +16,4 @@ open http://127.0.0.1:8000/
 ## Demo App
 This is hosted online on [Railway](https://railway.app). You can view (and install!) the demo app here: [https://django-htmx-pwa-demo-production.up.railway.app/](https://django-htmx-pwa-demo-production.up.railway.app/)
 
-Visiting the above link on an Android phone will prompt you to install the app. Visiting on iOS, you will need to tape `Share -> Add to Home Screen` to install the app.
+Visiting the above link on an Android phone will prompt you to install the app. Visiting on iOS, you will need to navigate to `Share -> Add to Home Screen` to install the app.
